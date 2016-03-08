@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>{{title}}</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='/styles/style.css' />
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900,600,300,200,100' rel='stylesheet' type='text/css'>
-        <script src="/js/jquery.js"></script>
-        <script src="/js/app.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet'>
     </head>
     <body>
-        <div class="nav">
-            <div class="nav-inner">
-                <div class="logo"><img src="/images/logo.png"></div>
-                <ul class="nav-items">
-                    <li><a href="/"><img src="/icons/png/home.png">Home</a></li>
-                    <li><a href="https://looklive.com/discover/"><img src="/icons/png/latest.png">Latest</a></li>
-                    <li><a href="https://looklive.com/people/"><img src="/icons/png/people.png">People</a></li>
-                    <li><a href="https://looklive.com/shows/"><img src="/icons/png/shows.png">Shows</a></li>
-                    <li><a href="https://looklive.com/music/"><img src="/icons/png/music.png">Music</a></li>
-                    <li><a href="https://looklive.com/brands/"><img src="/icons/png/brands.png">Brands</a></li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="header"><img src="/images/header.png"></div>
 
-        <div class="inner-wrapper">
+        <nav>
+            <img src="/images/logo.png" alt="Look live">
+            <ul>
+                <li><a href="/"><img src="/icons/png/home.png">Home</a></li>
+                <li><a href="/discover/"><img src="/icons/png/latest.png">Latest</a></li>
+                <li><a href="/people/"><img src="/icons/png/people.png">People</a></li>
+                <li><a href="/shows/"><img src="/icons/png/shows.png">Shows</a></li>
+                <li><a href="/music/"><img src="/icons/png/music.png">Music</a></li>
+                <li><a href="/brands/"><img src="/icons/png/brands.png">Brands</a></li>
+            </ul>  
+        </nav>
+        
+        <header>
+            <img src="/images/header-small.jpg" srcset="/images/header-small.jpg 480w, /images/header-medium.jpg 960w, /images/header-large.jpg 1920w" alt="House of Cards">
+        </header>
+        
+        <main>
             {{{body}}}
-        </div>
+        </main>
+        
     </body>
+    
+    <script src="/js/app.js"></script>
 </html>
