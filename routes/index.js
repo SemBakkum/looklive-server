@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+var lazy = require('lazy-modules');
 
 router.get('/', function(req, res, next) {
+    console.time('lazy-load'); lazy('resources/feed.json'); console.timeEnd('lazy-load');
     fs.readFile('resources/feed.json', 'utf8', function(err, data) {
         if(err) {
             res.status(404);

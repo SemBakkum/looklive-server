@@ -43,10 +43,7 @@ main {
 }
 
 header {
-    width: 100%;
-    height: 50vh;
-    max-height: 60vw;
-    overflow: hidden;
+
 }
 
 a {
