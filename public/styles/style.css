@@ -260,3 +260,61 @@ FEED & APPEARANCE SETTINGS
     font-size: 16px;
     margin: 1em 0;
 }
+
+/*--------------------------------------------------------------
+SPRITE SETTINGS
+--------------------------------------------------------------*/
+
+.menu-sprite {
+    background-image: url("../images/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.brands {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+
+.home {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -46px -5px;
+}
+
+.latest {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -5px -40px;
+}
+
+.music {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -39px -40px;
+}
+
+.people {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -85px -5px;
+}
+
+.shows {
+    margin-right: .5em;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-position: -74px -40px;
+}
