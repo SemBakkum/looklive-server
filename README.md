@@ -43,15 +43,6 @@ product id.
 
 The API returns JSON (for now).
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Performance matters</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet'>
-    </head>
     <body>
         <h1> Testing performance Looklive server </h1> 
         <article>
@@ -59,7 +50,7 @@ The API returns JSON (for now).
         </article>
         <h2>Deleted some font weights from the custom google fonts in HTML.</h2>
         <h3>Before</h3>
-        <img src="images/test2.png">
+        <img src="public/images/test2.png">
         <h3>After</h3>
         <img src="images/test1.png">
         <h2>Rewrote the HTML of the layout page to be semantic and 
