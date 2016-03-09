@@ -43,6 +43,7 @@ product id.
 
 The API returns JSON (for now).
 
+<html>
     <body>
         <h1> Testing performance Looklive server </h1> 
         <article>
@@ -84,3 +85,4 @@ The API returns JSON (for now).
         <img src="images/test8.png">
     </body>
 </html>
+
