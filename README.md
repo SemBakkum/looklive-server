@@ -42,3 +42,54 @@ appearance id.
 product id.
 
 The API returns JSON (for now).
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Performance matters</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet'>
+    </head>
+    <body>
+        <h1> Testing performance Looklive server </h1> 
+        <article>
+            <p>All these test were done with the throttling at a regular 4g speed. </p>
+        </article>
+        <h2>Deleted some font weights from the custom google fonts in HTML.</h2>
+        <h3>Before</h3>
+        <img src="images/test2.png">
+        <h3>After</h3>
+        <img src="images/test1.png">
+        <h2>Rewrote the HTML of the layout page to be semantic and 
+            efficiently</h2>
+        <h3>Before</h3>
+        <img src="images/test1.png">
+        <h3>After</h3>
+        <img src="images/test3.png">
+        <h2>Deleted the header image as a background, used srcset instead and reduced the size of the images used in srcset</h2>
+        <h3>Before</h3>
+        <img src="images/test3.png">
+        <h3>After</h3>
+        <img src="images/test4.png">
+        <h2>The loading time with jquery turned off</h2>
+        <h3>Before</h3>
+        <img src="images/test5.png">
+        <h3>After</h3>
+        <img src="images/test4.png">
+        <h2>Rewrote the app.js script to do the same, but without the use of jquery</h2>
+        <p>Special thanks to Emiel Zuurbier</p>
+        <h3>Before</h3>
+        <img src="images/test4.png">
+        <h3>After</h3>
+        <img src="images/test6.png">
+        <h2>Rewrote the css to be flexbox</h2>
+        <h3>Before</h3>
+        <img src="images/test6.png">
+        <h3>After</h3>
+        <img src="images/test7.png">
+        <h3>This is the result speed of the new website with no throttling</h3>
+        <img src="images/test8.png">
+    </body>
+</html>
