@@ -83,6 +83,11 @@ The API returns JSON (for now).
         <img src="public/images/test7.png">
         <h3>This is the result speed of the new website with no throttling</h3>
         <img src="public/images/test8.png">
+        <h2>Swaped the PNG icons for a sprite sheet</h2>
+        <h3>Before</h3> 
+        <img src="public/images/test8.png">
+        <h3>After</h3>
+        <img src="public/images/test9.png">
     </body>
 </html>
 
