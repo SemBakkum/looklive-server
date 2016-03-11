@@ -1,3 +1,6 @@
+/* Special thanks to Dennis van Bennekom for providing me with this code */
+
+
 /*
  * jQuery specifieke code omgezet naar vanilla javascript zodat de jQuery
  * library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
@@ -31,7 +34,7 @@
     }
 
     function loadPage(url, href) {
-        var wrapper = document.querySelector('.inner-wrapper');
+        var wrapper = document.querySelector('main');
 
         fetch(url)
             .then(response => response.text())
