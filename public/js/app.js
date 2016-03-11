@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-!function(){"use strict";function t(t){var e=t.currentTarget.attributes[2].value;document.querySelector(".product-indicator-active").classList.remove("product-indicator-active"),t.currentTarget.classList.add("product-indicator-active"),document.querySelector(".product-active").classList.remove("product-active"),document.querySelector('.product[data-uuid="'+e+'"]').classList.add("product-active")}if("querySelector"in document&&"addEventListener"in window&&document.querySelector(".product")){var e=document.querySelector(".product"),c=document.querySelector('.product-indicator[data-uuid="'+e.attributes[1].value+'"]'),r=document.getElementsByClassName("product-indicator"),d=0;for(e.classList.add("product-active"),c.classList.add("product-indicator-active"),d;d<r.length;d+=1)r[d].addEventListener("click",t,!1)}}();
-=======
 (function () {
     'use strict';
 
@@ -61,4 +58,3 @@
     });
 }());
 
->>>>>>> donnywals/master
