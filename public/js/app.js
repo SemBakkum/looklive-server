@@ -44,10 +44,6 @@
             });
     }
 
-    function feed() {
-        var blazy = new Blazy();
-    }
-
     function appearance() {
         // Appearance page
         var products = document.querySelectorAll('.product');
