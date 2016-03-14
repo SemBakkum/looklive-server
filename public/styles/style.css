@@ -118,7 +118,6 @@ nav ul li a:hover {
 /*--------------------------------------------------------------
 FEED & APPEARANCE SETTINGS
 --------------------------------------------------------------*/
-
 .feed-item {
     width: 300px;
     margin: .5em;
@@ -174,6 +173,10 @@ FEED & APPEARANCE SETTINGS
     width: 100%;
 }
 
+.appearance-right header {
+    height: auto;
+}
+
 .appearance .appearance-left .product-indicator {
     position: absolute;
     width: 20px;
@@ -208,7 +211,7 @@ FEED & APPEARANCE SETTINGS
     left: 0;
 }
 
-.appearance-products h1 {
+.appearance-products header h1 {
     font-size: 21px;
     color: #333;
     padding-bottom: .5em;
