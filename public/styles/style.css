@@ -202,9 +202,12 @@ FEED & APPEARANCE SETTINGS
     max-width: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
-    -webkit-transition: left .3s;
-    transition: left .3s;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
 }
 
 .appearance .appearance-products-inner .product.product-active {
