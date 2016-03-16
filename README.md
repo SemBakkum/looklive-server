@@ -117,7 +117,7 @@ The API returns JSON (for now).
         <li><b>Linkable</b> - Easily share via URL and not require complex installation.</li>
     </ul>
     
-    <a href="https://developers.google.com/web/progressive-web-apps">source</a> 
+    <a href="https://developers.google.com/web/progressive-web-apps" target="_blank">source</a> 
 
 </p>
 
