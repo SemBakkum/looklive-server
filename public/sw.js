@@ -7,7 +7,6 @@ this.addEventListener('install', event => {
   event.waitUntil(
     caches.open('look-live-v1').then(cache => {
       return cache.addAll([
-        './',
         '../styles/style.css',
         '../js/app.js',
         '../images/header-small.jpg',
@@ -19,12 +18,14 @@ this.addEventListener('install', event => {
 });
 
 this.addEventListener('fetch', event => event.respondWith(
-  caches.match(event.request).then(response => {
-    return response || fetch(event.request).then(response => {
-      return caches.open('look-live-v1').then(cache => {
-        cache.put(event.request, response.clone());
-        return response;
-      });
+    caches.match(event.request).then(response => {
+        return response || fetch(event.request).then(response => {
+            return caches.open('look-live-v1').then(cache => {
+                cache.put(event.request, response.clone());
+                return response;
+            })
+        })
     });
-  })
-});
+))
+                      
+                      
