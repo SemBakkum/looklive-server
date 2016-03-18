@@ -43,6 +43,16 @@ product id.
 
 The API returns JSON (for now).
 
+<h1>Service worker</h1>
+
+<h2>Speed without service worker</h2> 
+
+<img src="public/images/withoutsw.png">
+
+<h2>Speed with service worker</h2>
+
+<img src="public/images/withsw.png">
+
 <h1>Progressive web apps research</h1>
 
 <p>
