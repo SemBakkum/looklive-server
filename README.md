@@ -62,7 +62,7 @@ The API returns JSON (for now).
         <li><b>Connectivity independent</b> - Enhanced with service workers to work offline or on low quality networks.</li>
         <li><b>App-like</b> - Feel like an app to the user with app-style interactions and navigation because it's built on the app shell model.</li>
         <li><b>Fresh</b> - Always up-to-date thanks to the service worker update process.</li>
-        <li><b>Safe - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
+        <li><b>Safe</b> - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
         <li><b>Discoverable</b> - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.</li>
         <li><b>Re-engageable</b> - Make re-engagement easy through features like push notifications.</li>
         <li><b>Installable</b> - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.</li>
