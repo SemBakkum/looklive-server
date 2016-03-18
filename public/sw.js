@@ -17,15 +17,15 @@ this.addEventListener('install', event => {
   );
 });
 
-this.addEventListener('fetch', event => event.respondWith(
-    caches.match(event.request).then(response => {
-        return response || fetch(event.request).then(response => {
-            return caches.open('look-live-v1').then(cache => {
-                cache.put(event.request, response.clone());
-                return response;
-            })
-        })
-    });
-))
+this.addEventListener('activate', event => console.log('activated', event));
+
+this.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+      	return response || fetch(event.request)
+      })
+  );
+});
                       
                       
