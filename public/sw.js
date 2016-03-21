@@ -11,7 +11,10 @@ this.addEventListener('install', event => {
         '../js/app.js',
         '../images/header-small.jpg',
         '../images/spritesheet.png',
-        '../images/logo.png'
+        '../images/logo.png',
+        '/api/feed',
+        'https://fonts.googleapis.com/css?family=Raleway:300,400,700' 
+        
       ]);
     })
   );

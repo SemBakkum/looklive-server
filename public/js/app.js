@@ -5,6 +5,13 @@
  * jQuery specifieke code omgezet naar vanilla javascript zodat de jQuery
  * library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
 **/
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js', { scope: './' })
+    .then(reg => console.info('registered sw', reg))
+    .catch(err => console.error('error registering sw', err));
+}
+
 (function() {
     function init() {
         var links = document.querySelectorAll('a[data-url]');
