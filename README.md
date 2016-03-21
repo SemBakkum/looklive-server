@@ -84,3 +84,35 @@ The API returns JSON (for now).
     <a href="http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/" target="_blank">source</a> 
     <a href="http://arc.applause.com/2015/11/30/application-shell-architecture/" target="_blank">source</a> 
 </p>
+
+#Task managers research 
+
+##Grunt, Gulp, Broccoli and Mimosa 
+
+To make sure what the best task manager could be for me I searched the web for some articles. 
+
+Basicly a taskmanagers runs tasks for you that could be autoprefixing files, or minify files, but which one is the best, or better said comes closes to my needs. 
+
+Broccoli and Mimosa are quite new to the web and after reading a article a found out that broccoli and mimosa aren't so well supported yet. Broccoli is still in beta so that explains why their support isn't like the support grunt or gulp can offer. 
+
+Mimosa is also a good taskmanager but in the article I read the writer came upon some errors, so that one also falls off for me. 
+
+Then there are Gulp and Grunt. Both well supported and well used troughout the web, but which one is better. 
+
+##Gulp vs. Grunt
+
+The main difference between gulp and grunt is performance and that's just what I'm looking for. 
+Gulp is faster than Grunt because gulp doesn't make temp files, but uses node streams. Let me give a short example. 
+
+You want to compile and minify your sass file. Grunt first compiles the file and then makes a temporary file, that temporary file is used by the autoprefixer and the final product is then written to the destination file. 
+
+Gulp doesn't make temporary files, so gulp doesn't have to store a temp file. They just skip this part. Gulp compiles the file sends it to the prefixer and that rewrites it to the destination file. 
+
+## Is Gulp really better? 
+
+Gulp and Grunt are both good task managers and it's true that Grunt is better supported and has more users just because they've been around longer than Gulp. Also Grunt has more plugins than Gulp, but it is not to be forgotten that Gulp can also use plain node plugins (Thanks to Declan Rek for providing me with this info). So it really depends on the project that you're going to do, which one you should use. Because I want to gain speed with my project Gulp is the taskmanager for me at this moment. 
+
+[Source](http://jpsierens.com/task-runners-a-comparison-between-grunt-gulp-broccoli-and-mimosa/)
+[Source](http://www.hongkiat.com/blog/gulp-vs-grunt/)
+
+
