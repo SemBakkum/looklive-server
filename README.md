@@ -57,12 +57,13 @@ The API returns JSON (for now).
 
 <p>
     
-    A progressive web app is an app that has native app like user experience. To accomplish this native app like user experience a web app must use modern web capabilities to deliver this user experience.
+    A progressive web app is an app that has native app like user experience. To accomplish this native app like user experience a web app must use modern web capabilities to deliver this user experience. Alex Russell (Google engineer) first espoused progressive web apps in june 2015. 
 </p>
 
 <p>
 
-    Progressive web apps don't require any installation on a device, but is able to have an icon on the home screen. 
+    Progressive web apps (from this point refered to as PWA) don't require any installation on a device, but is able to have an icon on the home screen. 
+    Actually PWA's live as a tab in your browser. The more a user visits this URL the more functionality it will get. The PWA can see how manny times you haved used the PWA and after a certain while it can send you a notification to pin the PWA to the home screen. At this point the PWA will get more native app like capabilities. From sending notifications to offline usage. The offline usage is possible because of a service worker (from this point refered to as SW). A SW is one of the three things a web app needs to become a PWA. The remaining two are: the PWA has to run on HTTPS, and you have to Create an app manifest file, which specifies a bunch of information about your app such as its name.
     
     Progressive web apps are: 
     
@@ -80,5 +81,6 @@ The API returns JSON (for now).
     </ul>
     
     <a href="https://developers.google.com/web/progressive-web-apps" target="_blank">source</a> 
-
+    <a href="http://developer.telerik.com/featured/what-progressive-web-apps-mean-for-the-web/" target="_blank">source</a> 
+    <a href="http://arc.applause.com/2015/11/30/application-shell-architecture/" target="_blank">source</a> 
 </p>
