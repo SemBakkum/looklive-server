@@ -6,13 +6,14 @@
  * library niet in hoeft geladen te worden. Dit scheelt een stuk in laadtijd.
 **/
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js', { scope: './' })
-    .then(reg => console.info('registered sw', reg))
-    .catch(err => console.error('error registering sw', err));
-}
-
 (function() {
+    
+    if ('serviceWorker' in navigator) {
+      app.output('ServiceWorker is supported. Let\'s use it.');
+    } else {
+      app.output('ServiceWorker is not supported');
+    }
+    
     function init() {
         var links = document.querySelectorAll('a[data-url]');
 
@@ -36,20 +37,25 @@ if ('serviceWorker' in navigator) {
                 url = '/api/feed';
             }
 
-            loadPage(url)
+            loadPage(url);
         });
     }
 
     function loadPage(url, href) {
         var wrapper = document.querySelector('main');
-
+        
         fetch(url)
-            .then(response => response.text())
-            .then(text => {
-                wrapper.innerHTML = text;
-                ready();
-            });
+        .then(function(response) {
+            return response.text;
+        })
+        
+        .then(function(text) {
+            wrapper.innerHTML = text;
+            return ready();
+        });
+        
     }
+        
 
     function appearance() {
         // Appearance page
