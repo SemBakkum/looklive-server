@@ -115,4 +115,19 @@ Gulp and Grunt are both good task managers and it's true that Grunt is better su
 [Source](http://jpsierens.com/task-runners-a-comparison-between-grunt-gulp-broccoli-and-mimosa/)
 [Source](http://www.hongkiat.com/blog/gulp-vs-grunt/)
 
+#Speed testing
+
+##First test without Gulp 
+
+<img src="public/images/withoutgulp.png">
+
+##Test with Gulp 
+
+<img src="public/images/withgulp.png">
+
+##Test with subset font
+
+<img src="public/images/withsubset.png">
+
+I found out that compressing files and optimizing images through Gulp can gain speed advantages, but using a subsetted font instead of caching it in the service worker made me lose a lot of speed. So I'll probally reverse this back to how it was. 
 
