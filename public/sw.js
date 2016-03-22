@@ -7,11 +7,11 @@ this.addEventListener('install', event => {
   event.waitUntil(
     caches.open('look-live-v1').then(cache => {
       return cache.addAll([
-        '../styles/style.css',
-        '../js/app.js',
-        '../images/header-small.jpg',
-        '../images/spritesheet.png',
-        '../images/logo.png',
+        '/dist/css/style.css',
+        '/js/app.js',
+        '/images/header-small.jpg',
+        '/images/spritesheet.png',
+        '/images/logo.png',
         '/api/feed',
         'https://fonts.googleapis.com/css?family=Raleway:300,400,700' 
         

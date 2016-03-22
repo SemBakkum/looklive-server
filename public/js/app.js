@@ -9,7 +9,21 @@
 (function() {
     
     if ('serviceWorker' in navigator) {
-      app.output('ServiceWorker is supported. Let\'s use it.');
+      console.log('ServiceWorker is supported. Let\'s use it.');
+    } else {
+      console.log('ServiceWorker is not supported');
+    }
+    
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js', { scope: './' })
+        .then(function(reg) {
+          console.log('registered sw (see console)');
+          console.info('registered sw', reg);
+        })
+        .catch(function(err) {
+          console.log('error registering sw (see console)');
+          console.error('error registering sw', err);
+        });
     } else {
       app.output('ServiceWorker is not supported');
     }

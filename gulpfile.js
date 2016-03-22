@@ -15,13 +15,13 @@ gulp.task('minify-css', function() {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('public/dist/css'));
 });
 
 gulp.task('compress', function() {
     return gulp.src('public/js/app.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('public/dist/js'));
 });
 
 gulp.task('watch', function() {
