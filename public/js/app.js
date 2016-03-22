@@ -8,14 +8,9 @@
 
 (function() {
     
+
     if ('serviceWorker' in navigator) {
-      console.log('ServiceWorker is supported. Let\'s use it.');
-    } else {
-      console.log('ServiceWorker is not supported');
-    }
-    
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js', { scope: './' })
+      navigator.serviceWorker.register('/sw.js', { scope: './' })
         .then(function(reg) {
           console.log('registered sw (see console)');
           console.info('registered sw', reg);
@@ -27,6 +22,18 @@
     } else {
       app.output('ServiceWorker is not supported');
     }
+    
+    //Font face observer
+   var observer = new FontFaceObserver('Raleway');
+
+   observer.check()
+       .then(function (reg) {
+           console.log('Raleway is detected')
+           document.body.className += "fonts-loaded";
+       })
+       .catch(function(err) {
+           console.log('font is not detected')
+       });
     
     function init() {
         var links = document.querySelectorAll('a[data-url]');

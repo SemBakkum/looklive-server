@@ -2,6 +2,18 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+
+gulp.task('optimize', function() {
+	return gulp.src('public/images/*')
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		}))
+		.pipe(gulp.dest('public/dist/images'));
+});
 
 gulp.task('lint', function() {
     return gulp.src('public/js/app.js')
@@ -27,7 +39,8 @@ gulp.task('compress', function() {
 gulp.task('watch', function() {
     gulp.watch('public/js/app.js', ['lint', 'compress']);
     gulp.watch('public/styles/*.css', ['minify-css']);
+    gulp.watch('public/images/*', ['optimize']);
 });
 
-gulp.task('default', ['lint', 'minify-css', 'compress', 'watch']);
+gulp.task('default', ['optimize', 'lint', 'minify-css', 'compress', 'watch']);
 
