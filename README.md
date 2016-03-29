@@ -133,8 +133,47 @@ I found out that compressing files and optimizing images through Gulp can gain s
 
 #Conclusion 
 
-Writing good semantic HTMl helped gain a good page performance. To get some consistent results I tested the website in a 4G network and this we're the results from the semantic HTML.
-##Before
+##HTML
+Writing good semantic HTMl helped gain a good page performance. To get some consistent results I tested the website in a 4G network and this were the results from the semantic HTML.
+###Before
 ![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test2.png "Initial speed")
-##After
-![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test1.png "Speed with semantic HTML")
+###After
+![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test3.png "Speed with semantic HTML")
+
+So refactoring the code to be semantic HTML helped me gain around 2,5s of speed on a 4G network. 
+##Jquery
+Another big winner was trowing away Jquery and replacing it with self written code. These were the results. 
+###Before
+![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test3.png "Initial speed")
+###After
+![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test4.png "Speed without Jquery")
+
+I gained around 0,5s on a 4G network and the data that had to be loaded reduced. 
+##Srcset
+
+Adding a srcset to the header image of the homepage and reducing the filesize of these images helped gain loading speed, but not that much. The good thing about using the srcset is that mobile users don't load a image that is 2,5MB but one that is close to 60KB. So the use of this is good for the band-width. 
+
+##Service worker
+
+Because of the service worker most images, text CSS etc. etc. are cached in the service worker cache. The first time a person loads the website in a browser with no throtling the load time is around 790ms and this is without the service worker installed. With the service worker the load time is around the 775ms. At this point the images form the api feed were not stored in the service worker cache. With this the speeds advantage at a second visit (so with the images from the api feed stored) would be a lot greater. 
+
+##Task manager
+
+###Gulp
+
+With Gulp as taskmanager I gained around the 200ms of page load. This is because gulp minified the css and javascript and optimized the images used in the website. By automating these tasks it's also a speed gainer for the developer. 
+
+##Fontface
+
+I used the fontface observer, but doiscovered I lost speed. If I were to cache the font in the service worker cache the website is quicker the second time you visit it. 
+
+##Where ends meet
+
+Good performance gainers were rewriting the HTML to be semantic and writing your own piece of code that replaced the piece that was used from Jquery. The service worker also helps you gain speed and makes it possible to use the website when you're offline. So at the end I can say that: 
+
+1. Write semantic HTML
+2. Only use Jquery when you are going to use almost the whole library, else write vanilla JS to replace the piece of Jquery. 
+3. Optimize your images and use srcset for mobile users. 
+4. Do the optimization via a taskmanager like gulp or grunt. Let this taskmanager also minify your CSS and JS. 
+5. Add a service worker for offline useage and cache the necessary things that make it usable. The first time you will have to load everything, but the second, third, fourth time the page load will be a lot smaller because of the service worker cache. 
+
