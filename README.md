@@ -131,3 +131,10 @@ Gulp and Grunt are both good task managers and it's true that Grunt is better su
 
 I found out that compressing files and optimizing images through Gulp can gain speed advantages, but using a subsetted font instead of caching it in the service worker made me lose a lot of speed. So I'll probally reverse this back to how it was. 
 
+#Conclusion 
+
+Writing good semantic HTMl helped gain a good page performance. To get some consistent results I tested the website in a 4G network and this we're the results from the semantic HTML.
+##Before
+![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test2.png "Initial speed")
+##After
+![alt text](https://github.com/SemBakkum/looklive-server/blob/sem/taskmanager/public/images/test1.png "Speed with semantic HTML")
